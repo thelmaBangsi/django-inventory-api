@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventory Management</title>
+</head>
+<body>
+    <h1>Inventory Items</h1>
+    <a href="{% url 'item_create' %}">+ Add New Item</a>
+    <hr>
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total value</th>
+            <th>Action</th>
+        </tr>
+        {% for item in items %}
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.description }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>${{ item.price }}</td>
+            <td>${{ item.total_price }}</td>
+            <td>
+                <a href="{% url 'item_update' item.pk %}">Edit</a> | 
+                <a href="{% url 'item_delete' item.pk %}">Delete</a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="5">No items in inventory yet.</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
