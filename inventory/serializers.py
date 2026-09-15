@@ -1,9 +1,19 @@
 from rest_framework import serializers
-from .models import Item
+from inventory.models import Product
 
-class ItemSerializer(serializers.ModelSerializer):
-    total_price = serializers.ReadOnlyField()
-
+class ProductSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Item
-        fields = ['id', 'name', 'description', 'quantity', 'price', 'total_price', 'created_at']
+        model = Product
+        fields = ['id', 'name', 'category', 'price', 'stock']
+
+    def validate_price(self, value):
+        if value <= 0:
+            raise serializers.ValidationError("Price must be strictly greater than zero.")
+        return value
+
+    def validate_stock(self, value):
+        if value < 0:
+            raise serializers.ValidationError("Stock cannot be negative.")
+        return value
+
+

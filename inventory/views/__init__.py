@@ -3,8 +3,8 @@ from rest_framework.pagination import PageNumberPagination
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter, OrderingFilter
 
-from .models import Product
-from .serializers import ProductSerializer
+from inventory.models import Product
+from inventory.serializers import ProductSerializer
 
 
 class StandardResultsSetPagination(PageNumberPagination):
@@ -19,7 +19,6 @@ class ProductListCreateAPIView(generics.ListCreateAPIView):
     pagination_class = StandardResultsSetPagination
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
 
-    # Enable filtering by category, search by name/category, and sorting
     filterset_fields = ['category']
     search_fields = ['name', 'category']
     ordering_fields = ['price', 'stock', 'id', 'name']
@@ -29,3 +28,4 @@ class ProductListCreateAPIView(generics.ListCreateAPIView):
 class ProductDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
+
