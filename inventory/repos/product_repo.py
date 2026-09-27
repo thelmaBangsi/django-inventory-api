@@ -1,5 +1,6 @@
 from inventory.models import Product
 <<<<<<< HEAD
+<<<<<<< HEAD
 #this imports the django model class earlier created to enable the ORM db
 #operations within the repository scope.
 class ProductRepository: 
@@ -32,6 +33,8 @@ class ProductRepository:
 #     and so on for every field....
 #)    
 =======
+=======
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
 
 class ProductRepository:
     @staticmethod
@@ -45,4 +48,7 @@ class ProductRepository:
     @staticmethod
     def create(data):
         return Product.objects.create(**data)
+<<<<<<< HEAD
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
+=======
 >>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882

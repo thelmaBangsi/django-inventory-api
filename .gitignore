@@ -1,5 +1,6 @@
 venv/
 <<<<<<< HEAD
+<<<<<<< HEAD
 __pycache__/
 *.pyc
 db.sqlite3
@@ -8,12 +9,21 @@ __pycache__/
 *.pyc
 db.sqlite3
 =======
+=======
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
 .venv/
 env/
 __pycache__/
 *.pyc
 db.sqlite3
 .DS_Store
+<<<<<<< HEAD
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
+venv/
+__pycache__/
+*.pyc
+db.sqlite3
+=======
 >>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
 venv/
 __pycache__/

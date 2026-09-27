@@ -1,5 +1,6 @@
 from django.test import TestCase
 <<<<<<< HEAD
+<<<<<<< HEAD
 from inventory.models import Product 
 
 class ProductServiceTests(TestCase):
@@ -17,6 +18,8 @@ class ProductServiceTests(TestCase):
         self.assertEqual(product.category, "Displays")
         self.assertEqual(product.stock, 5)
 =======
+=======
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
 from inventory.models import Product
 from inventory.services.product_service import ProductService
 
@@ -40,4 +43,7 @@ class ProductServiceTest(TestCase):
         else:
             result = self.product
         self.assertEqual(result.name, "Sample Item")
+<<<<<<< HEAD
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
+=======
 >>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 from inventory.repos.product_repo import ProductRepository
 
 class ProductService:
@@ -29,6 +30,8 @@ class ProductService:
         return ProductRepository.create_product(validated_data)
     
 =======
+=======
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
 from decimal import Decimal, InvalidOperation
 from django.shortcuts import get_object_or_404
 from inventory.models import Product
@@ -84,4 +87,7 @@ class ProductService:
     def delete_product(pk):
         product = get_object_or_404(Product, pk=pk)
         product.delete()
+<<<<<<< HEAD
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
+=======
 >>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882

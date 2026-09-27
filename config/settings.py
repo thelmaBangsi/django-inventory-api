@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 """
 Django settings for config project.
 
@@ -25,21 +26,29 @@ SECRET_KEY = 'django-insecure-#9)0$$4yw3j41g1tdyr4q&g2970((a*q@z6ui$k#e+iv+o&vl$
 
 # SECURITY WARNING: don't run with debug turned on in production!
 =======
+=======
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-replace-this-key-for-production'
 
+<<<<<<< HEAD
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
+=======
 >>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 # Application definition
 
+=======
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
 =======
 >>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
 INSTALLED_APPS = [
@@ -50,15 +59,21 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'rest_framework',
     'rest_framework.authtoken',
     'rest_framework_simplejwt',
     'django_filters', 
 =======
+=======
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
     
     # Custom and Third-Party Apps
     'rest_framework',
     'django_filters',  # Added for DRF search, filter, and ordering backends
+<<<<<<< HEAD
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
+=======
 >>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
     'inventory',
 ]
@@ -94,10 +109,13 @@ TEMPLATES = [
 WSGI_APPLICATION = 'config.wsgi.application'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+=======
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
 =======
 >>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
 DATABASES = {
@@ -108,10 +126,13 @@ DATABASES = {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
+=======
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
 =======
 >>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
 AUTH_PASSWORD_VALIDATORS = [
@@ -130,10 +151,13 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
+=======
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
 =======
 >>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
 LANGUAGE_CODE = 'en-us'
@@ -144,6 +168,7 @@ USE_I18N = True
 
 USE_TZ = True
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 # Static files (CSS, JavaScript, Images)
@@ -179,6 +204,8 @@ SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7), # How long refresh tokens last
 }
 =======
+=======
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
 STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
@@ -191,4 +218,7 @@ REST_FRAMEWORK = {
         'rest_framework.filters.OrderingFilter',
     ),
 }
+<<<<<<< HEAD
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
+=======
 >>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882

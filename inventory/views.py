@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status, permissions
@@ -144,6 +145,8 @@ class RegisterAPIView(APIView):
         return Response(serializer.data, status=status.HTTP_200_OK)
     
 =======
+=======
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
 from rest_framework import generics
 from rest_framework.pagination import PageNumberPagination
 from django_filters.rest_framework import DjangoFilterBackend
@@ -175,4 +178,7 @@ class ProductListCreateAPIView(generics.ListCreateAPIView):
 class ProductDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
+<<<<<<< HEAD
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
+=======
 >>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882

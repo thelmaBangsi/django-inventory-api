@@ -1,5 +1,6 @@
 from django.test import TestCase
 <<<<<<< HEAD
+<<<<<<< HEAD
 from inventory.models import Product 
 
 class ProductRepositoryTests(TestCase): 
@@ -19,6 +20,8 @@ class ProductRepositoryTests(TestCase):
         self.assertEqual(product.stock, 12)
         self.assertEqual(float(product.price), 75.00)
 =======
+=======
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
 from inventory.models import Product
 from inventory.repos.product_repo import ProductRepository
 
@@ -42,4 +45,7 @@ class ProductRepositoryTest(TestCase):
         else:
             products = Product.objects.all()
         self.assertIn(self.product, products)
+<<<<<<< HEAD
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
+=======
 >>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882

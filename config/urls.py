@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 """
 URL configuration for config project.
 
@@ -31,6 +32,8 @@ urlpatterns = [
     path('api/register/<int:pk>/', RegisterAPIView.as_view(), name='register-detail'),
 ]
 =======
+=======
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
 from django.contrib import admin
 from django.urls import path, include
 
@@ -38,4 +41,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('inventory.urls')),
 ]
+<<<<<<< HEAD
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
+=======
 >>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882

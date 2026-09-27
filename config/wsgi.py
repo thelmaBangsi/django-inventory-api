@@ -5,7 +5,11 @@ It exposes the WSGI callable as a module-level variable named ``application``.
 
 For more information on this file, see
 <<<<<<< HEAD
+<<<<<<< HEAD
 https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/
+=======
+https://docs.djangoproject.com/en/6.0/howto/deployment/wsgi/
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
 =======
 https://docs.djangoproject.com/en/6.0/howto/deployment/wsgi/
 >>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
