@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status, permissions
@@ -142,3 +143,36 @@ class RegisterAPIView(APIView):
         serializer = RegisterSerializer(users, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
     
+=======
+from rest_framework import generics
+from rest_framework.pagination import PageNumberPagination
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework.filters import SearchFilter, OrderingFilter
+
+from .models import Product
+from .serializers import ProductSerializer
+
+
+class StandardResultsSetPagination(PageNumberPagination):
+    page_size = 5
+    page_size_query_param = 'page_size'
+    max_page_size = 100
+
+
+class ProductListCreateAPIView(generics.ListCreateAPIView):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+    pagination_class = StandardResultsSetPagination
+    filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
+
+    # Enable filtering by category, search by name/category, and sorting
+    filterset_fields = ['category']
+    search_fields = ['name', 'category']
+    ordering_fields = ['price', 'stock', 'id', 'name']
+    ordering = ['id']
+
+
+class ProductDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882

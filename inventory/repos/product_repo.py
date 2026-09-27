@@ -1,4 +1,5 @@
 from inventory.models import Product
+<<<<<<< HEAD
 #this imports the django model class earlier created to enable the ORM db
 #operations within the repository scope.
 class ProductRepository: 
@@ -30,3 +31,18 @@ class ProductRepository:
 #     category=validated data['category']
 #     and so on for every field....
 #)    
+=======
+
+class ProductRepository:
+    @staticmethod
+    def get_all():
+        return Product.objects.all()
+
+    @staticmethod
+    def get_by_id(product_id):
+        return Product.objects.filter(id=product_id).first()
+
+    @staticmethod
+    def create(data):
+        return Product.objects.create(**data)
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882

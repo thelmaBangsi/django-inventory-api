@@ -1,4 +1,5 @@
 from django.db import models
+<<<<<<< HEAD
 #this line is importing Django's object relational Mapper (ORM). 
 #this tool lets me write python instead of raw sql queries like create table to talk to the db
 
@@ -18,3 +19,15 @@ class Product(models.Model): #below is the blueprint for product that is being t
         return self.name 
     #the above two lines allows the actual name of the product to be displayed. 
     #instead of a code technical name such as Product Object (1)
+=======
+
+class Product(models.Model):
+    name = models.CharField(max_length=255)
+    category = models.CharField(max_length=100)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+    stock = models.PositiveIntegerField(default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882

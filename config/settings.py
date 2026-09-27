@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """
 Django settings for config project.
 
@@ -23,13 +24,24 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-#9)0$$4yw3j41g1tdyr4q&g2970((a*q@z6ui$k#e+iv+o&vl$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+=======
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+SECRET_KEY = 'django-insecure-replace-this-key-for-production'
+
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
+<<<<<<< HEAD
 
 # Application definition
 
+=======
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -37,10 +49,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
     'rest_framework',
     'rest_framework.authtoken',
     'rest_framework_simplejwt',
     'django_filters', 
+=======
+    
+    # Custom and Third-Party Apps
+    'rest_framework',
+    'django_filters',  # Added for DRF search, filter, and ordering backends
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
     'inventory',
 ]
 
@@ -74,10 +93,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
+<<<<<<< HEAD
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+=======
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -85,10 +107,13 @@ DATABASES = {
     }
 }
 
+<<<<<<< HEAD
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
+=======
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -104,10 +129,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+<<<<<<< HEAD
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
+=======
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -116,6 +144,7 @@ USE_I18N = True
 
 USE_TZ = True
 
+<<<<<<< HEAD
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
@@ -149,3 +178,17 @@ SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(hours=36), # Change this to your desired duration (e.g., 1 day, 2 hours, etc.)
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7), # How long refresh tokens last
 }
+=======
+STATIC_URL = 'static/'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 5,
+    'DEFAULT_FILTER_BACKENDS': (
+        'django_filters.rest_framework.DjangoFilterBackend',
+        'rest_framework.filters.SearchFilter',
+        'rest_framework.filters.OrderingFilter',
+    ),
+}
+>>>>>>> fc9e15cac64e90c9743f8920246eede0efd88882
